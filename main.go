@@ -111,7 +111,7 @@ func (u *gdUploader) initParams() {
 				os.Stderr.WriteString("Options cannot set after target files")
 				Usage(1)
 			}
-		case "--token", "-t":
+		case "--config", "-c":
 			if len(u.authPath) != 0 {
 				os.Stderr.WriteString("Too many token parameters!")
 				Usage(1)
