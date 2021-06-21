@@ -1,4 +1,4 @@
-name: gdrive_uploader Relaeser
+name: gdrive_uploader release action
 
 on:
   push:
@@ -6,9 +6,9 @@ on:
       - master
 
 jobs:
-  ci_test_and_release:
-    name: gdrive_uploader releaser
-    runs-on: self-hosted
+  release_action:
+    name: gdrive_uploader release action
+    runs-on: ubuntu-latest
     container:
       image: golang:1.15.5
     steps:
