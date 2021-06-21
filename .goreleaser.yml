@@ -1,0 +1,19 @@
+archives:
+  - id: gdrive_uploader
+    builds:
+      - gdrive_uploader
+    format: zip
+    name_template: "{{ .Os }}_{{ .Arch }}_gdrive_uploader"
+    files:
+      - none*
+builds:
+  - main: .
+    id: "gdrive_uploader"
+    binary: gdrive_uploader
+    goos:
+      - darwin
+      - linux
+    goarch:
+      - amd64
+    ldflags:
+      -X main.version={{.Version}} -X main.goversion={{.Env.GOVERSION}} -X main.revision={{.Env.REVISION}} -X main.date={{.Env.DATE}}
